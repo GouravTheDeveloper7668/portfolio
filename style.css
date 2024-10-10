@@ -1,0 +1,161 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: navy;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .header-content h1 {
+    font-size: 3rem;
+    color: navy;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    color: yellow;
+  }
+  
+  /* About Section */
+  #about {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: navy;
+    color: white;
+  }
+  
+  #about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+  }
+  
+  /* Projects Section */
+  #projects {
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .project {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .project h3 {
+    font-size: 1.5rem;
+    color: navy;
+  }
+  
+  .project p {
+    font-size: 1.1rem;
+  }
+  
+  /* Contact Section */
+  #contact {
+    padding: 100px 20px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2.5rem;
+  }
+  
+  form {
+    display: inline-block;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: yellow;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  form button {
+    background-color: yellow;
+    color: navy;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: navy;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-list {
+      flex-direction: column;
+    }
+  }
+  
