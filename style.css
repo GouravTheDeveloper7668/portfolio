@@ -1,161 +1,125 @@
-/* General Styling */
+:root {
+  --navy-blue: #001f3f;
+  --gold: #ff9100;
+  --white: #ffffff;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: var(--white);
+}
+
+.header {
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: 10px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-info a {
+  color: var(--white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-links a {
+  color: var(--white);
+  margin-left: 15px;
+}
+
+.main-nav {
+  padding: 20px 0;
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--navy-blue);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--navy-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--navy-blue);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .contact-info, .social-links {
+      display: none;
   }
   
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+  .nav-links {
+      display: none;
   }
   
-  /* Navbar */
-  nav {
-    background-color: navy;
-    padding: 1rem;
+  .mobile-menu-btn {
+      display: block;
   }
   
-  nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: yellow;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  /* Header */
-  header {
-    text-align: center;
-    padding: 100px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    margin: 20px;
-  }
-  
-  .header-content h1 {
-    font-size: 3rem;
-    color: navy;
-  }
-  
-  .header-content p {
-    font-size: 1.5rem;
-    color: yellow;
-  }
-  
-  /* About Section */
-  #about {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: navy;
-    color: white;
-  }
-  
-  #about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  #about p {
-    font-size: 1.2rem;
-  }
-  
-  /* Projects Section */
-  #projects {
-    padding: 100px 20px;
-    text-align: center;
-  }
-  
-  .project-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .project {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-  }
-  
-  .project h3 {
-    font-size: 1.5rem;
-    color: navy;
-  }
-  
-  .project p {
-    font-size: 1.1rem;
-  }
-  
-  /* Contact Section */
-  #contact {
-    padding: 100px 20px;
-    background-color: navy;
-    color: white;
-    text-align: center;
-  }
-  
-  #contact h2 {
-    font-size: 2.5rem;
-  }
-  
-  form {
-    display: inline-block;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 5px;
-    color: yellow;
-  }
-  
-  form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  form button {
-    background-color: yellow;
-    color: navy;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: navy;
-    color: white;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .project-list {
+  .nav-links.active {
+      display: flex;
       flex-direction: column;
-    }
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--white);
+      padding: 20px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.1);
   }
-  
+}

@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Gourav Vishwakarma</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <a href="mailto:gk720918@gmail.com">
+            <i class="fas fa-envelope"></i>
+            gk720918@gmail.com
+          </a>
+          <a href="tel:+917979831032">
+            <i class="fas fa-phone"></i>
+            +91 7979831032
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <a href="#" class="logo">Gourav Vishwakarma</a>
+        <button class="mobile-menu-btn">☰</button>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
-    <div class="header-content">
-      <h1>Gourav Vishwakarma</h1>
-      <p>Full Stack Laravel Developer</p>
-    </div>
   </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Experienced Full Stack Web Developer proficient in Laravel, Angular, and more.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Paatham.in</h3>
-        <p>School Management System with various automation modules.</p>
-      </div>
-      <div class="project">
-        <h3>District Scheme & Resource Management (DSRM)</h3>
-        <p>Interactive dashboard for managing data export/import and maps.</p>
-      </div>
-      <!-- Add more projects similarly -->
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2024 Gourav Vishwakarma. All Rights Reserved.</p>
-  </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
